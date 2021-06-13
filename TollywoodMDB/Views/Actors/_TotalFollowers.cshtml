@@ -1,0 +1,78 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+@{ int i = 0; }
+
+<script>
+
+    $(document).ready(function () {
+
+    });
+
+    function UserFollow(id) {
+        $.ajax({
+            url: '@Url.Action("Follow","User")',
+            data: { Followerid: id },
+            cache: false,
+            dataType: "Json",
+            type: "Post",
+            success: function (data, statusText, jqXHR) {
+                alert(data);
+            },
+            error: function (jqXHR) {
+                alert(jqXHR.statusText);
+            }
+        });
+    }
+
+</script>
+
+<div>
+    @if (Model.IdNameStatus.Count > 0)
+    {
+        foreach (var uf in Model.IdNameStatus)
+        {
+            i++;
+        <div style="width:500px;float:left;color:white">
+            <table>
+                <tr style="background-color:#888888;padding:0px 0px 3px 0px;">
+                    <td width="300px">
+                        <img src='@Url.Action("GetImage", "Login", new { id = uf.id })' height="80" ; width="80" />
+                        <label>@uf.Username</label>
+                    </td>
+                    @if (uf.FlollowStatus == "P")
+                    {
+                     <td>
+                        <div class="Moviecategory">
+                            <label>Requset sent</label>
+                            <label>&#10004;</label>
+                        </div>
+                     </td>
+                    }
+                    else if (uf.FlollowStatus == "Y")
+                    {
+                        <td>
+                            <button class="custombutton">UnFollow</button>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <button class="custombutton" onclick="UserFollow(@uf.id)">Follow</button>
+                        </td>
+                    }
+                </tr>
+            </table>
+        </div>
+            if (i % 2 == 0)
+            {
+        <br/>
+            }
+        }
+    }
+    else
+    {
+        <div class="Moviecategory">
+            <label>No one is following this actor curently.</label>
+            </div>
+   }
+
+        </div>

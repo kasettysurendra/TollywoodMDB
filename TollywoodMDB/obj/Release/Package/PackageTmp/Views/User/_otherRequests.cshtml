@@ -1,0 +1,28 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+<div  class="Pointer Customscrollbar">
+    <div style="background-color:white;box-shadow: 0px 0px 5px 0px #888888;width:450px;overflow-y:scroll;height:300px;"
+         id="OtherRequests">
+        @if (Model.IdNameStatus.Count > 0)
+        {
+            foreach (var follwer in Model.IdNameStatus)
+            {
+                <table  style="background-color:#9599b6;padding:0px 0px 3px 0px;">
+                    <tr>
+                        <td rowspan="2"><img src="@Url.Action("GetImage", "Login", new { id = follwer.id })" height="70" width="60" /></td>
+                        <td style="color:black;">@follwer.Username</td>
+                    </tr>
+                    <tr class="Moviecategory">
+                        <td><label>Your request is accepted</label></td>
+                        <td><label>@follwer.StatusDate</label></td>
+                    </tr>
+                </table>
+            }
+        }
+        else
+        {   
+            <div ><table><tr><td class="Moviecategory"><label>No recent notifications found</label></td></tr></table></div>
+        }
+    </div>
+</div>
+

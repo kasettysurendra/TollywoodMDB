@@ -1,0 +1,36 @@
+﻿@model TollywoodMDB.Models.ViewModel.MovieFilesViewModel
+
+@{
+    ViewBag.Title = "MovieImage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MovieImage</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.LabelFor(x => x.Movie_id)
+        @Html.TextBoxFor(x => x.Movie_id, new { type = "text" })
+        @Html.ValidationMessageFor(x => x.Movie_id)
+    </div>
+    <br/>
+    <div>
+        @Html.LabelFor(x => x.icon_file)
+        @Html.TextBoxFor(x => x.icon_file, new { type = "file" })
+        @Html.ValidationMessageFor(x => x.icon_file)
+    </div>
+    <br />
+    <div>
+        @Html.LabelFor(x => x.icon_file)
+        @Html.TextBoxFor(x => x.icon_file, new { type = "file" })
+        @Html.ValidationMessageFor(x => x.icon_file)
+    </div>
+    <br />
+
+    <button type="submit">Upload</button>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

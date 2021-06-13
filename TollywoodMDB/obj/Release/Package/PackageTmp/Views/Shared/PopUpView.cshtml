@@ -1,0 +1,41 @@
+﻿<script>
+    $(document).ready(function () {
+
+        $("#PopUpCancel").on("click", function () {
+
+        })
+        $("#PopUpOkay").on("click", function () {
+            $("#PopUp").hide();
+        })
+
+    });
+</script>
+@if (!string.IsNullOrEmpty(ViewBag.PopUpStatus))
+{
+<div id="PopUp">
+    <div style="height:100%;width:100%;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.6);position:absolute;">
+        <div style="height:0px;width:0px;">
+            <table style="padding:5px 5px 5px 5px;height:auto;width:500px;height:200px;margin-left:500px;margin-top:200px;">
+                <tr>
+                    <td style="padding:5px 5px 5px 5px; background-color:crimson">
+                        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:white;">TollywoodMDB.com Says</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:25px 25px 25px 25px;background-color:white;">
+                        &nbsp; &nbsp; @ViewBag.PopUpStatus
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding:5px 5px 5px 5px;background-color:crimson;">
+                        &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        @*<button class="custombutton" id="PopUpCancel">Cancel</button>*@
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button style="padding:5px 5px 5px 5px;color:white;background-color:black;margin-left:300px;" id="PopUpOkay">Okay</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+}

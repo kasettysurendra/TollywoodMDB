@@ -1,0 +1,288 @@
+﻿@model TollywoodMDB.Models.ViewModel.MovieDetailsViewModel
+@{
+    ViewBag.Title = "MovieDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<link type="text/css" href="~/Content/Custome.css" rel="stylesheet"/>
+@Scripts.Render("~/Scripts/jquery-3.1.1.js")
+@Scripts.Render("~/Scripts/StarRating.js")
+<script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#giveRating").hide();
+        $("#DBrating").hover(function () {
+            $(this).hide();
+            $("#giveRating").show();
+        });
+        $("#giveRating").hover(function () {
+        },
+            function () {
+                $(this).hide();
+                $("#DBrating").show();
+            }
+        );
+        $("#MovieTrailer").hide();
+        $("#Reviews").on("click", function () {
+            renderpartialview();
+        })
+        $("#Videos").on("click", function () {
+            rendervideosview();
+        })
+        $('#starFive').hover(function () {
+            $("#starTwo,#starOne,#starThree,#starFour,#starFive").css("color", 'gold');
+        },
+            function () {
+                //$("#starTwo,#starOne,#starThree,#starFour,#starFive").css("color", 'black');
+                $("#DBrating").show();
+                $("#giveRating").hide();
+            }
+        );
+        $('#starFour').hover(function () {
+            $("#starTwo,#starOne,#starThree,#starFour").css("color", 'gold');
+            $("#starFive").css("color", 'black');
+
+        },
+            function () {
+                //$("#starTwo,#starOne,#starThree,#starFour").css("color", 'black');
+                $("#DBrating").show();
+                $("#giveRating").hide();
+            }
+        );
+        $('#starThree').hover(function () {
+            $("#starTwo,#starOne,#starThree").css("color", 'gold');
+            $("#starFour,#starFive").css("color", 'black');
+        },
+            function () {
+                //$("#starTwo,#starOne,#starThree").css("color", 'black');
+                $("#DBrating").show();
+                $("#giveRating").hide();
+            }
+        );
+        $('#starTwo').hover(function () {
+            $("#starOne,#starTwo").css("color", 'gold');
+            $("#starFour,#starFive,#starThree").css("color", 'black');
+
+        },
+            function () {
+                //$("#starOne,#starTwo").css("color", 'black');
+                $("#DBrating").show();
+                $("#giveRating").hide();
+            }
+        );
+        $('#starOne').hover(function () {
+            $("#starOne").css("color", 'gold');
+            $("#starFour,#starFive,#starThree,#starTwo").css("color", 'black');
+        },
+            function () {
+                //$("#starOne").css("color", 'black');
+                $("#DBrating").show();
+                $("#giveRating").hide();
+            }
+        );
+
+    });
+    function starClick(movieId, val) {
+          $.ajax({
+              url: '@Url.Action("RateMovie","MovieDetails")',
+              data: { movieId: movieId, ratingValue: val },
+                cache: false,
+                type: "post",
+                dataType: "json",
+                success: function (data, textStatus, jqXHR) {
+                    alert(data);
+                },
+                error: function (data) {
+                    alert(data.statusText);
+                }
+            })
+    }
+    function renderpartialview(MovieID){
+         $("#loader,#loadersupport").css("display", "block");
+         $("#Breif,#Cast,#Videos,#BoxOffice,#Songs").css("background-color", "#383636");
+            $("#Reviews").css("background-color", "crimson");
+            $.ajax({
+                url: '@Url.Action("Reviews","MovieDetails")',
+                data: { id: @Model.Movies.MovieId},
+                cache: false,
+                type: "post",
+                dataType: "html",
+                success: function (data, textStatus, jqXHR) {
+                    $("#RenderPartialview").html(data);
+                    $("#loader,#loadersupport").css("display", "none");
+                },
+                error: function (data) {
+                    alert(data.statusText);
+                }
+            })
+    }
+    function rendervideosview(){
+        $("#Breif,#Cast,#BoxOffice,#Reviews,#Songs").css("background-color", "#383636");
+        $("#Videos").css("background-color", "crimson");
+        $("#loader,#loadersupport").css("display", "block");
+        $("#MovieTrailer").css("display", "block");
+            $.ajax({
+                url: '@Url.Action("VideosView","Videos")',
+                data: { id: @Model.Movies.MovieId},
+                cache: false,
+                type: "post",
+                dataType: "html",
+                success: function (data, textStatus, jqXHR) {
+                    $("#RenderPartialview").html(data);
+                    $("#loader,#loadersupport").css("display", "none");
+                   
+                },
+                error: function (data) {
+                    alert(data.statusText);
+                }
+            })
+    }
+    function getSongs(id) {
+        $("#Breif,#Cast,#BoxOffice,#Reviews,#Videos").css("background-color", "#383636");
+        $("#Songs").css("background-color", "crimson");
+        $("#loader,#loadersupport").css("display", "block");
+        $.ajax({
+            url: '@Url.Action("SongsView", "Songs")',
+            data: { movieId: id },
+            cache: false,
+            dataType: "html",
+            type: "post",
+            success: function (data, statusText, jqXHR)
+            {
+                $("#RenderPartialview").html(data);
+                $("#loader,#loadersupport").css("display", "none");
+            },
+            error: function (data)
+            {
+                alert(data.statusText);
+            }
+            })
+        }
+
+</script>
+
+
+<div>
+<div >
+    <div >
+        <h2 >@Model.Movies.Movie_Name</h2>
+        <div id="DBrating" style="font-size:25px;width:150px;height:auto;">
+            @if (Model.Movies.Movie_ratings >= 1)
+        {
+        <span style="color:gold;">&#9733</span>
+        }
+        else
+        {
+        <span>&#9733</span>
+        }
+            @if (Model.Movies.Movie_ratings >= 2)
+        {
+        <span style="color:gold;">&#9733</span>
+        }
+        else
+        {
+        <span>&#9733</span>
+        }
+            @if (Model.Movies.Movie_ratings >= 3)
+        {
+        <span style="color:gold;">&#9733</span>
+        }
+        else
+        {
+        <span>&#9733</span>
+        }
+            @if (Model.Movies.Movie_ratings >= 4)
+        {
+        <span style="color:gold;">&#9733</span>
+        }
+        else
+        {
+        <span>&#9733</span>
+        }
+            @if (Model.Movies.Movie_ratings == 5)
+        {
+        <span style="color:gold;">&#9733</span>
+        }
+        else
+        {
+        <span>&#9733</span>
+        }
+
+        </div>
+    </div>
+
+    <div style="font-size:25px;cursor:pointer;width:150px;height:auto;cursor:pointer;" id="giveRating">
+        <span onclick="starClick(@Model.Movies.MovieId,1)" id="starOne">&#9733</span>
+        <span onclick="starClick(@Model.Movies.MovieId,2)" id="starTwo">&#9733</span>
+        <span onclick="starClick(@Model.Movies.MovieId,3)" id="starThree">&#9733</span>
+        <span onclick="starClick(@Model.Movies.MovieId,4)" id="starFour">&#9733</span>
+        <span onclick="starClick(@Model.Movies.MovieId,5)" id="starFive">&#9733</span>
+    </div>
+    <label>@ViewBag.TotalRateCount People rated this Movie</label>
+
+        <div class="objMovieStyle">
+            <div style="height:400px;width:100%;background-image:url(@Url.Action("GetImageBackground","Movies",new { id=Model.Movies.MovieId}))">
+                <div style="padding-top:345px;">
+                    @*<label id="Breif" class="lable-content" onclick="lblClick()">Breif</label>*@
+                    <a id="Reviews" class="a-content">Reviews</a>
+                    @*<label id="Cast" class="lable-content">Cast</label>*@
+                    @*<label id="BoxOffice" class="lable-content">Box Office</label>*@
+                    <a id="Videos" class="a-content">Videos</a>
+                    <a id="Songs" class="a-content" onclick="getSongs(@Model.Movies.MovieId)">Songs</a>
+                </div>
+            </div>
+        </div>
+</div>
+<strong style="font-size:25px;">&#128065 </strong><text> @Model.Movies.Views</text>
+<a onclick="renderpartialview()" style="cursor:pointer;">
+<img src="~/Content/Images/chatsymbol.png" height="25" width="30" alt="Comments"/> @ViewBag.commentsCount</a><br/>
+<strong>Description:</strong><text>@Model.Movies.Movie_decription</text>
+
+    <br/><br/>
+
+    @*critics,and other tabs*@
+
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Tweets">Tweets</a></li>
+            <li><a data-toggle="tab" href="#News">News</a></li>
+            <li><a data-toggle="tab" href="#Box_office">Box office</a></li>
+        </ul>
+
+        <div class="tab-content">
+          
+               @foreach (var tweet in Model.MovieReleatedData)
+               {
+                   <div id="Tweets" class="tab-pane fade in active">
+                          @Html.Raw(tweet.Data)
+                   </div>
+               }
+           
+
+
+            <div id="News" class="tab-pane fade">
+                <p>News</p>
+            </div>
+
+            <div id="Box_office" class="tab-pane fade">
+                <p>Box_office</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<div id="getSongsView" style="margin-left:100px;"></div>
+<div class="loadersupport" id="loadersupport">
+    <div class="loader" id="loader"></div>
+</div>
+<div id="RenderPartialview">
+</div>
+
+ </div>
+

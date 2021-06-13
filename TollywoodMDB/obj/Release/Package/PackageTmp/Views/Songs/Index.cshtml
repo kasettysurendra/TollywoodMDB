@@ -1,0 +1,32 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/>
+
+<div>
+    @foreach (var id in Model.DictionaryValues)
+    {
+        <div style="float:left;margin-right:20px;">
+            <table>
+                <tr class="objMovieStyle">
+                    <td style="cursor:pointer;">
+                        <img src="@Url.Action("GetImage", "Movies", new { id = id.Key })" height="170" width="150"
+                             alt="No data available" onclick="location.href='@Url.Action("MovieSongs","Songs",new { id = id.Key })'" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="150px;">
+                        <a onclick="location.href='@Url.Action("MovieSongs","Songs",new { id = id.Key })'" style="cursor:pointer;text-align:center;">
+                            @id.Value
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+    <br />
+</div>

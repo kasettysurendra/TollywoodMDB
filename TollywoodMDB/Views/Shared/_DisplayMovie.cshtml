@@ -1,0 +1,151 @@
+﻿
+<script>
+    $(document).ready(function () {
+    });
+    //function blacklikeClicked(movieId, movieName) {
+    //    $("#" + movieId + "").hide();
+    //    $("#" + movieName + "").css("visibility", "visible");
+    //}
+    function likeClicked(movieId) {
+        var likes = $("#" + movieId + "").html();
+        $.ajax({
+            url: '@Url.Action("MovieLiked","Movies")',
+            data: { id: movieId },
+            dataType: "Json",
+            type: "post",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                $("#" + movieId + "").html(parseInt( likes) + 1);
+            },
+            error: function (data){
+                alert(data.statusText);
+            }
+        })
+    }
+    function DislikeClicked(movieId ) {
+        var dislikes = $("#" + movieId + "dislike").html();
+        $.ajax({
+            url: '@Url.Action("MovieDisLiked", "Movies")',
+            data: { id: movieId },
+            dataType: "Json",
+            type: "post",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                $("#" + movieId + "dislike").html(parseInt(dislikes) + 1);
+            },
+            error: function (data){
+                alert(data.statusText);
+            }
+        })
+    }
+    function NextClicked(Count) {
+        window.location.href('@Url.Action("Index","Movies")');
+    }
+</script>
+<link rel="stylesheet" href="~/Content/Custome.css" type="text/cs   s"/>
+<div >
+    @foreach (var m in Model.Movies)
+    {
+        <div class="objMovieStyle">
+            <table cellpadding="5" cellspacing="5" style="table-layout:fixed;">
+                <tr>
+                    <td rowspan="8">
+                        <img src="@Url.Action("GetImage", "Movies", new { id = @m.MovieId })" alt="@m.Movie_Name" height="170" width="150" onclick="location.href='@Url.Action("MovieDetails", "Movies", new { Id = m.MovieId })'" />
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td rowspan="8" colspan="2">
+                        <img src="~/Content/Images/bluelike.jpeg" onclick="likeClicked(@m.MovieId)" alt="like" class="bluelike" /><br />
+                        <label style="color:silver;" id="@m.MovieId">@m.Likes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="~/Content/Images/Dislike.png" onclick="DislikeClicked(@m.MovieId)" alt="dislike" class="bluelike" /><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label style="color:silver;" id="@string.Format(m.MovieId+"dislike")">@m.DisLikes</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td >
+                    <td><a href=@Url.Action("MovieDetails", "Movies", new { Id = m.MovieId })>@m.Movie_Name</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Cast:</strong></td>
+                    <td>
+                        <text>
+                            @{ string[] array = m.Movie_Cast.Split(',');
+                                foreach (var a in array)
+                                {
+                                    <a href="@Url.Action("ActorDetails","Actors",new { ActorName=a})">@a,</a>
+                                }
+                                <a href="@Url.Action()">more..</a>
+                            }
+                        </text>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Language:</strong></td>
+                    <td><text>@m.Movie_Language</text></td>
+                </tr>
+                <tr>
+                    <td><strong>Ratings:</strong></td>
+                    @*<td><text>@m.Movie_ratings</text></td>*@
+                    <td>
+                        
+                        <div style="font-size:25px;">
+                            @if (m.Movie_ratings >= 1)
+                            {
+                                <span  id="starOne" style="color:gold;">&#9733</span>
+                            }
+                            else
+                            {
+                            <span  id="starOne">&#9733</span>
+                            }
+                            @if (m.Movie_ratings >= 2)
+                            {
+                                <span id="starTwo" style="color:gold;">&#9733</span>
+                            }
+                            else
+                            {
+                            <span  id="starTwo">&#9733</span>
+                            }
+                            @if (m.Movie_ratings >= 3)
+                            {
+                            <span  id="starThree" style="color:gold;">&#9733</span>
+                            }
+                            else
+                            {
+                                <span  id="starThree">&#9733</span>
+                            }
+                            @if (m.Movie_ratings >= 4)
+                            {
+                            <span  id="starFour" style="color:gold;">&#9733</span>
+                            }
+                            else
+                            {
+                                <span id="starFour">&#9733</span>
+                            }
+                            @if (m.Movie_ratings ==5 )
+                            {
+                            <span id="starFive" style="color:gold;">&#9733</span>
+                            }
+                            else
+                            {
+                                <span id="starFive">&#9733</span>
+                            }
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><strong>Description:</strong></td>
+                    <td rowspan="2" style="word-wrap:break-word;width:600px;"><text>@m.Movie_decription</text></td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td><strong>Genre:</strong></td>
+                    <td><text>@m.Movie_Genre.ToString()</text></td>
+                </tr>
+            </table>
+        </div>
+    }
+
+</div>
+
+

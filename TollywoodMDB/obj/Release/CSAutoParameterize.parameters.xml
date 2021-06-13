@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="TollywoodMDBContextconn-Web.config Connection String" description="TollywoodMDBContextconn Connection String used in web.config by the application to access the database." defaultValue="Data Source=LAPTOP-SMD2LGTF\SQLEXPRESS;Initial Catalog=TollywoodMDB;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\suren\\onedrive\\documents\\visual\ studio\ 2017\\Projects\\TollywoodMDB\\TollywoodMDB\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TollywoodMDBContextconn']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,60 @@
+﻿
+@model TollywoodMDB.Models.Search
+
+<link rel="stylesheet" href="~/Content/themes/base/autocomplete.css" />
+<link rel="stylesheet" href="~/Content/themes/base/jquery-Ui-Smoothness.css" />
+
+
+<script>
+    $(document).ready(function () {
+        $("#searchText").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("AutoComplete", "Search")',
+                    dataType: "json",
+                    type: "POST",
+                    data: { searchText: request.term },
+                    success: function (data) {
+                        response($.map(data, function (item) {
+                            return { label: item.Movie_Name, value: item.Movie_Name };
+                        }))  
+
+                    },
+                    error: function (jqXHR) {
+                        alert(jqXHR.responseText);
+                    },
+
+                })
+            }
+        });
+    });
+
+    function SearchSubmit() {
+
+    if ($("#soryBy").val() == 0 && $("#genre").val() == 0 && $("#searchText").val() =='')
+        {
+        alert("Please select atleast one value");
+    }
+        else {
+            $("#searchForm").attr("action", "@Url.Action("SearchMovie", "Search")");
+            $("#searchForm").submit();
+    }
+}
+
+</script>
+
+    <html>
+<head>
+</head>
+    <body>
+        <form @*action="@Url.Action("SearchMovie","Search")"*@ method="post" onsubmit="SearchSubmit()" id="searchForm">
+           
+            @Html.Label("Genre:")
+            @Html.EnumDropDownListFor(model => model.genre , htmlAttributes:new { @class="DropDown",@id="genre"})
+            @Html.Label("Sortby:",htmlAttributes: new {@id="lblSortby"})
+            @Html.EnumDropDownListFor(model => model.sortBy , htmlAttributes: new { @class = "DropDown" , @id="soryBy" })
+            @Html.EditorFor(model => model.SearchText, new { htmlAttributes = new { @id = "searchText" } })
+            <input type="submit" id="Search" value="Search" class="custombutton" />
+        </form>
+    </body>
+</html>

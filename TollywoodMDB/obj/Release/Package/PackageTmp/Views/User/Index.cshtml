@@ -1,0 +1,216 @@
+﻿@model TollywoodMDB.Models.ViewModel.LoginandLoginFiles
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+<link href="~/Content/Custome.css" rel="stylesheet" />
+<script>
+    $(document).ready(function () {
+        $(".MoviecategoryContainer").hide();
+        $("#FirstNameDispaly,#LastNameDispaly").hide();
+        $("#PopUpOkay").on("click", function () {
+            $("#PopUp").hide();
+        }
+        );
+   
+    });
+
+    var i = 0;
+    function follownotifications(userid) {
+        if (i == 0)
+        {
+            $.ajax({
+                url: '@Url.Action("PendingRequests","User")',
+                data: { currentUserId: userid },
+                cache: false,
+                type: "Post",
+                dataType: "html",
+                success: function (data, statusText, jqXHR) {
+                    $("#FollowRequestsContainer").html(data).show();
+                    $("#FollowRequestNotificationCount").hide();
+                    i = 1;
+                },
+                Error: function (jqXHR) {
+                    alert(jqXHR.statusText);
+                }
+            })
+        }
+        else
+        {
+            i = 0;
+            $("#FollowRequestsContainer").hide();
+
+        }
+    }
+    var otherNotificationsFlag = 0;
+    function otherNotifications(userid)
+    {
+        if (otherNotificationsFlag == 0) {
+            $.ajax({
+                url: '@Url.Action("otherRequests", "User")',
+                data: { currentUserId: userid },
+                cache: false,
+                type: "Post",
+                dataType: "html",
+                success: function (data, statusText, jqXHR) {
+                    $("#OtherRequestsContainer").html(data).show();
+                    $("#otherNotificationsCount").hide();
+                    otherNotificationsFlag = 1;
+                },
+                Error: function (jqXHR) {
+                    alert(jqXHR.statusText);
+                }
+            })
+        }
+        else
+        {
+            otherNotificationsFlag = 0;
+            $("#OtherRequestsContainer").hide();
+
+        }
+    }
+
+       var totaluserfollowerstoggleint = 0;
+    function TotalUserFollowers(userId) {
+        if (totaluserfollowerstoggleint == 0) {
+            $.ajax({
+                url: '@Url.Action("TotalUserFollowers","User")',
+                data: { CurrentUserID: userId },
+                dataType: "html",
+                cache: false,
+                type: "Post",
+                success: function (data, statusText, jqXHR) {
+                    $("#Followplussymbol").html("-");
+                    $("#TotalUserFollowers").html(data).hide().slideDown(500);
+                    totaluserfollowerstoggleint = 1;
+                },
+                Error: function (jqXHR) {
+                    alert(jqXHR.statusText);
+                }
+            })
+        }
+        else {
+            $("#Followplussymbol").html("+");
+            $("#TotalUserFollowers").slideUp(500);
+            totaluserfollowerstoggleint = 0;    
+        }
+    }
+</script>
+
+    <div>@{Html.RenderPartial("PopUpView");}</div>
+    <div style="float:left;width:210px;">
+        <table class="UserTable usertablewidth">
+            <tr>
+                <td>
+                    <div style="height:50px;width:50px;border-radius:50%;background-color:cornsilk;cursor:pointer;margin-left:25px;"
+                         id="FolloNotifications" onclick="follownotifications(@Model.Login.LoginId)">
+                        <div style="cursor:pointer;background-color:crimson;height:20px;width:20px;border-radius:50%;margin-left:20px;"
+                             id="FollowRequestNotificationCount">
+                            <label style="margin-left:5px;">@ViewBag.RequestCount</label>
+                        </div>
+                    </div>
+                    <div id="FollowRequestsContainer" style="height:0px;width:0px;">
+                    </div>
+                    <br />
+                    <label>Follow Requests</label>
+                </td>
+        </table>
+        <br />
+        <table class="UserTable usertablewidth">
+            <tr>
+                <td>
+                    <div style="height:50px;width:50px;border-radius:50%;background-color:cornsilk;cursor:pointer;margin-left:25px;"
+                         onclick="otherNotifications(@Model.Login.LoginId)">
+                        <div style="cursor:pointer;background-color:crimson;height:20px;width:20px;border-radius:50%;margin-left:20px;"
+                             id="otherNotificationsCount">
+                            <label style="margin-left:5px;">@ViewBag.otherNotifications</label>
+                        </div>
+                    </div>
+                    <div id="OtherRequestsContainer" style="height:0px;width:0px;">
+                    </div>
+                    <br />
+                    <label>Recent Notifications</label>
+                </td>
+        </table>
+    </div>
+
+    
+<div style="margin-left:210px;">
+    <div class="UserTable">
+        <form method="post" action="@Url.Action("Index","User")" enctype="multipart/form-data">
+
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(m => m.Login.FirstName)</td>
+                    <td>
+                        <span id="FirstNameDispaly">@Model.Login.FirstName</span>
+                        <span id="FirstNameEditor">@Html.EditorFor(m => m.Login.FirstName)</span>
+                    </td>
+                    <td rowspan="4">
+                        <img height="200" width="200" src="@Url.Action("GetImage","Login",new { Id=Model.Login.LoginId})" id="ProfilePicture"/><br />
+                        @Html.TextBoxFor(m => m.LoginfilesViewModel.ProfilePicture, new { type = "file" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m => m.Login.LastName)</td>
+                    <td>
+                        <span id="LastNameDispaly">@Model.Login.LastName</span>
+                        <span id="LastNameEditor">@Html.EditorFor(m => m.Login.LastName)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m => m.Login.EmailId)</td>
+                    <td>@Model.Login.EmailId</td>
+                </tr>
+                <tr><td>@Html.LabelFor(m => m.Login.NewsLetter)</td><td>@Html.CheckBoxFor(m => m.Login.NewsLetter)</td></tr>
+                <tr>
+                    @*<td><button class="custombutton" id="UserDetailsEdit">Edit</button></td>*@
+                    <td><input type="submit" class="custombutton" id="Submit" /></td>
+                </tr>
+            </table>
+
+
+        </form>
+        <br />
+        <form action="/User/ChangePassword" method="post">
+            <table class="UserTable">
+                <tr>
+                    <th>
+                        Change Password
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>@Html.PasswordFor(m => m.ChangePasswordModel.Password)</td>
+                </tr>
+                <tr>
+                    <td>
+                        New Password:
+                    </td>
+                    <td>@Html.PasswordFor(m => m.ChangePasswordModel.NewPassword)</td>
+                </tr>
+                <tr>
+                    <td>
+                        Confirm Password:
+                    </td>
+                    <td>@Html.PasswordFor(m => m.ChangePasswordModel.ConfirmPassword)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" id="ChangePasswordsubmit" value="Change" class="custombutton" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="ContentDropingbar" onclick="TotalUserFollowers(@Model.Login.LoginId)">
+        <label id="Followers" onclick="TotalUserFollowers(@Model.Login.LoginId)">People you are following</label>
+        <label id="Followplussymbol" style="float:right;color:white;margin-right:20px;">+</label>
+    </div>
+    <div id="TotalUserFollowers"> </div>
+</div>
+

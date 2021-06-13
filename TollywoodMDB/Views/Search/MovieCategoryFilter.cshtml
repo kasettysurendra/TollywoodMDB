@@ -1,0 +1,24 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+@{
+    ViewBag.Title = "MovieCategoryFilter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    @if (Model.Movies.Count() != 0)
+    {
+        @Html.Partial("_DisplayMovie");
+
+    }
+    else
+    {
+        <pre>                          <strong>Oops!!....no movies found with the search criteria
+                                   please try a part of the movie name</strong></pre>
+    }
+</div>
+
+
+
+

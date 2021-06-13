@@ -1,0 +1,42 @@
+﻿@model TollywoodMDB.Models.ViewModel.LoginfilesViewModel 
+
+@{
+    ViewBag.Title = "uploadProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/><br/>
+<h2>uploadProfile</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Upload Profile Picture</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.id, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(Model => Model.id, new { type = "text" })
+                @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ProfilePicture, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+               @Html.TextBoxFor(Model=>Model.ProfilePicture, new { type = "file" })
+                @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Upload" class="custombutton" />
+            </div>
+        </div>
+        <label style="color:green;">You can skip this step and navagate through the website</label>
+    </div>
+}
+
+

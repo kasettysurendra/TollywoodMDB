@@ -1,0 +1,25 @@
+﻿@model TollywoodMDB.Models.ViewModel.ListOfActorsViewModel
+
+<div style="background-color:#888888;color:white;height:500px;margin-top:auto;">
+    <br/>
+    <h3>Top Actors</h3>
+    <br/>
+   
+        @foreach (var alpha in Model.AlphabetCategory)
+        {
+            <div style="float:left;width:200px;">
+                <label>@alpha</label>
+                <ul>
+                    @foreach (var name in Model.ActorNames)
+                    {
+                        if (name.StartsWith(alpha))
+                        {
+                            <li><a href="@Url.Action("ActorDetails","Actors",new { ActorName=name})" style="color:#b9b8b8">@name</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+           
+</div>
+

@@ -1,0 +1,49 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+<script>
+    $(document).ready(function () {
+
+    });
+
+    function DownloadSong( SongId) {
+        $.ajax(
+            {
+                url: '@Url.Action("GetAudio","Songs")',
+                dataType: "html",
+                type: "post",
+                cache: false,
+                data: {SongId: SongId },
+                success: function (data,statusText,jqXHR) {
+                    
+                },
+                error: function (data) {
+                    alert(data.statusText);
+                }
+            })
+    }
+
+</script>
+<div style="height:50px;margin:20px 0px 20px 0px;background-color: #383636">
+    <label style="font-size: larger;margin-top:10px;color:white;margin-left:5px;">Songs</label>
+</div>
+@if (Model.Songs.Count == 0)
+{
+    <pre><label>There are no songs added for this movie yet...</label></pre>
+}
+else
+{
+    foreach (var s in Model.Songs)
+    {
+        <table class="objMovieStylewidth">
+            <tr>
+                <td><text style="color:crimson;">@s.SongName</text></td>
+                <td>
+                @*@Html.ActionLink("Download","GetAudio",new { songId=s.SongId})*@
+                    <a href="@Url.Action("GetAudio", "Songs", new { s.SongId })" download="[TMDB]@s.SongName">Download</a>
+            </tr>
+            <tr>
+                <td><text style="color:silver;">-- @s.SongSingers</text></td>
+            </tr>
+        </table>
+    }
+
+}

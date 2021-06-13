@@ -1,0 +1,59 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+@{
+    Layout= "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+
+<div style="float:left;margin-left:210px;">
+
+    <h3>Latest Movies</h3>
+
+    <div class="latestMoviesStyle Customscrollbar">
+        <div style="width:260%;">
+            @foreach (var m in Model.Movies)
+            {
+                <div style="float:left; padding:5px;">
+                    <table class="objMovieStyle">
+                        <tr>
+                            <td>
+                                <img src="@Url.Action("GetImage", "Movies", new { id = @m.MovieId })" alt="@m.Movie_Name" height="170" width="150"
+                                     onclick="location.href='@Url.Action("MovieDetails", "Movies", new { Id = @m.MovieId })'" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">
+                                <a onclick="location.href='@Url.Action("MovieDetails", "Movies", new { Id = @m.MovieId })'">@m.Movie_Name <text>- (</text>@m.Movie_Release_Date.Year<text>)</text></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+    <br />
+    <h3>Latest Mp3 Songs</h3>
+
+    <div class="latestMoviesStyle Customscrollbar">
+        <div style="width:300%;">
+            @foreach (var m in Model.DictionaryValues)
+            {
+                <div style="float:left; padding:5px;">
+                    <table class="objMovieStyle">
+                        <tr>
+                            <td>
+                                <img src="@Url.Action("GetImage", "Movies", new { id = @m.Key })" alt="@m.Value" height="170" width="150"
+                                     onclick="location.href='@Url.Action("MovieSongs", "Songs", new { Id = @m.Key })'" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">
+                                <a onclick="location.href='@Url.Action("MovieSongs", "Songs", new { Id = @m.Key })'">@m.Value</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

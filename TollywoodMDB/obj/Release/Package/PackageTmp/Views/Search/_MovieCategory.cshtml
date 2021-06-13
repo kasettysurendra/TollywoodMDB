@@ -1,0 +1,21 @@
+﻿
+
+
+<div class="MoviecategoryContainer">
+    <div class="custombutton">
+        <a>Movie Category</a>
+    </div><br />
+        <ul class="Moviecategory">
+            <li>@Html.ActionLink("Action", "MovieCategoryFilter", "Search",new {FilterBy="Action"},"")<text>@ViewBag.Action</text></li>
+            <li>@Html.ActionLink("Adventure", "MovieCategoryFilter", "Search", new { FilterBy = "Adventure" }, "")<text>@ViewBag.Adventure</text></li>
+            <li>@Html.ActionLink("Animation", "MovieCategoryFilter", "Search", new { FilterBy = "Animation" }, "")<text>@ViewBag.Animation</text></li>
+            <li>@Html.ActionLink("Biopics", "MovieCategoryFilter", "Search", new { FilterBy = "Biopics" }, "")<text>@ViewBag.Biopics</text></li>
+            <li>@Html.ActionLink("Comedy", "MovieCategoryFilter", "Search", new { FilterBy = "Comedy" }, "")<text>@ViewBag.Comedy</text></li>
+            <li>@Html.ActionLink("Drama", "MovieCategoryFilter", "Search", new { FilterBy = "Drama" }, "")<text>@ViewBag.Drama</text></li>
+            <li>@Html.ActionLink("Documentary", "MovieCategoryFilter", "Search", new { FilterBy = "Documentary" }, "")<text>@ViewBag.Documentary</text></li>
+            <li>@Html.ActionLink("Thriller", "MovieCategoryFilter", "Search", new { FilterBy = "Thriller" }, "")<text>@ViewBag.Thriller</text></li>
+            <li>@Html.ActionLink("Romantic", "MovieCategoryFilter", "Search", new { FilterBy = "Romantic" }, "")<text>@ViewBag.Romantic</text></li>
+            <li>@Html.ActionLink("ScienceFiction", "MovieCategoryFilter", "Search", new { FilterBy = "ScienceFiction" }, "")<text>@ViewBag.ScienceFiction</text></li>
+        </ul>
+</div>
+

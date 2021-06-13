@@ -1,0 +1,40 @@
+﻿
+<script>
+
+    $(document).ready(function () {
+        $("#profileimage").hide();
+        $("#profilelabel").hide();
+        $("#profilehidebutton").on("click", function () {
+
+            $("#profileimage").toggle();
+            $("#profilelabel").toggle();
+
+        });
+    });
+
+</script>
+
+
+
+
+@if (!string.IsNullOrEmpty(Session["UserEmail"] as string))
+{
+
+    <div>
+        <table style="float:right;">
+            <tr>
+                <td>
+                    <button class="custombutton" style="float:right;" id="profilehidebutton">&lt;</button>
+                </td>
+                <td onclick="location.href='@Url.Action("Index","User")'" id="profileimage">
+                    <img height="50" width="50" src="@Url.Action("GetImage", "Login", new { id = Convert.ToInt32(Session["UserId"].ToString()) })" />
+                </td>
+                <td onclick="location.href='@Url.Action("Index","User")'" id="profilelabel" style="background-color:#888888">
+                    <label style="color:white;padding-right:20px;cursor:pointer;">@Session["UserEmail"].ToString()</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+}
+

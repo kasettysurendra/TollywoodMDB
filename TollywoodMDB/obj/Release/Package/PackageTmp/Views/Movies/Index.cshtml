@@ -1,0 +1,31 @@
+﻿@model   TollywoodMDB.Models.MovieAndImagesDetails
+    @{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        $("#index" +@ViewBag.pageIndexCss+"").css("background-color", "#363638").css("padding","3px 3px 3px 3px");
+    });
+
+</script>
+
+<div>
+    @Html.Partial("_DisplayMovie")
+</div>
+
+
+
+<div style="margin-left:40%;">
+    @for (int i = ViewBag.startPageIndex; i <= ViewBag.startPageIndex+4; i++)
+    {
+        <button class="custombutton" id=@string.Format("index" + i)
+         onclick="location.href ='@Url.Action("Index", "Movies",new {count=i*5,pageIndex=i})'">@i</button>
+    }
+    <button id="nextButton" class="custombutton"
+            onclick="location.href ='@Url.Action("Index", "Movies",new {count=(ViewBag.startPageIndex + 4)*5,pageIndex= (ViewBag.startPageIndex + 4)})'">
+        Skip&nbsp;&nbsp;&raquo;
+    </button>
+</div>
+

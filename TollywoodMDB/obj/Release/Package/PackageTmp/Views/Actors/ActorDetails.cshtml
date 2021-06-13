@@ -1,0 +1,173 @@
+﻿@model TollywoodMDB.Models.ViewModel.ActorAndActorFilesViewModel
+
+@{
+    ViewBag.Title = "ActorDetails";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+@{
+    TimeSpan caluculateAge = DateTime.Now - @Model.Actors.Date_Of_Birth;
+    int age = Convert.ToInt32(caluculateAge.Days / 365);
+
+}
+
+<link type="text/css" href="~/Content/Custome.css" rel="stylesheet" />
+@Scripts.Render("~/Scripts/jquery-3.1.1.js")
+
+<script>
+    $(document).ready(function () {
+    });
+    var i = 0;
+    function TotalMovies() {
+        if (i == 0) {
+            $.ajax({
+                url: '@Url.Action("AllMovies", "Actors")',
+                data: { actorName: '@Model.Actors.Actor_Name' },
+                cache: false,
+                type: "POST",
+                dataType: "html",
+                success: function (data, statusText, jqXHR) {
+                    i = 1;
+                    $("#plussymbol").html('-');
+                    $("#TotalMovies").html(data).hide();
+                    $("#TotalMovies").slideDown(1000);
+
+                },
+                Error: function (jqXHR) {
+                    alert(jqXHR.statusText);
+                }
+            });
+        }
+        else {
+            $("#plussymbol").html('+');
+            $("#TotalMovies").slideUp(1000);
+            i = 0;
+        }
+    }
+
+    function FollowClick(Actor_Id) {
+        $.ajax({
+            url: '@Url.Action("Follow","Actors")',
+            data: {ActorId:Actor_Id},
+            dataType: "Json",
+            type: "POST",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                if (data == '1') {
+                    alert("You have started following this actor");
+                    window.location.reload();
+                }
+                else {
+                    alert("Please login to follow");
+                }
+            },
+            Error: function (jqXHR) {
+                alert(jqXHR.statusText);
+            }
+        });
+    }
+    function UnfollowClick(Actor_Id) {
+        $.ajax({
+            url: '@Url.Action("Unfollow","Actors")',
+            data: {ActorId:Actor_Id},
+            dataType: "Json",
+            type: "POST",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                alert(data);
+                window.location.reload();
+                
+            },
+            Error: function (jqXHR) {
+                alert(jqXHR.statusText);
+            }
+        });
+    }
+
+    var totalfollowerstoggleint = 0;
+    function TotalFollowers(Actor_Id) {
+        if (totalfollowerstoggleint == 0) {
+            $.ajax({
+                url: '@Url.Action("TotalFollowers","Actors")',
+                data: { ActorId: Actor_Id },
+                dataType: "html",
+                cache: false,
+                type: "Post",
+                success: function (data, statusText, jqXHR) {
+                    $("#Followplussymbol").html("-");
+                    $("#TotalFollowers").html(data).hide().slideDown(1000);
+                    totalfollowerstoggleint = 1;
+                },
+                Error: function (jqXHR) {
+                    alert(jqXHR.statusText);
+                }
+            })
+        }
+        else {
+            $("#Followplussymbol").html("+");
+            $("#TotalFollowers").slideUp(1000);
+            totalfollowerstoggleint = 0;
+        }
+    }
+
+</script>
+
+<div style="margin-left:210px;width:100%">
+
+    <h2>@Model.Actors.Actor_Name</h2>
+    <br />
+    <div style="float:left;margin-right:5px;">
+        <img src="@Url.Action("GetImage","Actors",new { ActorId=Model.Actors.Actor_Id})" height="200" width="180" />
+    </div>
+    <div class="Moviecategory">
+        <ul>
+            <li>
+                @if (ViewBag.FollowStatus)
+                {
+                    <button class="custombutton" onclick="UnfollowClick(@Model.Actors.Actor_Id)">Unfollow</button>
+                    <label>&#10004;</label>
+                    <br />
+                    <label style="cursor:pointer;" onclick="location.href='@Url.Action()'">You and @(ViewBag.FollowersCount - 1) more are following</label>
+                }
+                else
+                {
+                    <button class="custombutton" onclick="FollowClick(@Model.Actors.Actor_Id)">Follow</button>
+                    <br />
+                    <label style="cursor:pointer;">@ViewBag.FollowersCount people are following</label>
+                }
+
+            </li>
+        </ul>
+    </div>
+    <div style="clear:left;"></div>
+    <br />
+    <table class="objMovieStyle">
+        <tr>
+            <td><b>DOB:</b></td>
+            <td>@Model.Actors.Date_Of_Birth.ToShortDateString()</td>
+        </tr>
+        <tr>
+            <td><b>Age:</b> </td>
+            <td>@age</td>
+        </tr>
+        <tr>
+            <td><b>Address:</b> </td>
+            <td>@Model.Actors.Actor_Address</td>
+        </tr>
+
+    </table>
+    <br/>
+    <div class="ContentDropingbar" onclick="TotalMovies()">
+        <label id="Movies" onclick="TotalMovies()">Movies : @ViewBag.MoviesCount</label>
+        <label id="plussymbol" style="float:right;color:white;margin-right:20px;">+</label>
+    </div>
+    <div id="TotalMovies" class="TotalMovies"></div>
+    <div class="ContentDropingbar" onclick="TotalFollowers(@Model.Actors.Actor_Id)">
+        <label id="Followers" onclick="TotalFollowers(@Model.Actors.Actor_Id)">Followers</label>
+        <label id="Followplussymbol" style="float:right;color:white;margin-right:20px;">+</label>
+    </div>
+    <div id="TotalFollowers"></div>
+</div>
+
+
+

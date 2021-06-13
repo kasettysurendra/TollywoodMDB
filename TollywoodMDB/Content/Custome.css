@@ -1,0 +1,336 @@
+﻿body{
+    color:black;
+}
+.a-content {
+    font-size: larger;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    background-color: #383636;
+    cursor: pointer;
+    font-family: Calibri;
+    font-size: 25px;
+}
+    .a-content:hover {
+        color:white;
+        text-decoration-line:none;
+    } 
+    
+    .rating > span {
+        font-size: 25px;
+    }
+    .rating > span:hover {
+        color: transparent;
+        font-size:0;
+        cursor: pointer;
+    }
+        .rating > span:hover:before {
+            color: gold;
+            content: "\2605";
+            font-size: 25px;
+            cursor:pointer;
+        }
+
+.custombutton {
+    background-color:crimson;
+    border:7px solid crimson;
+    color:white;
+    border-radius:3px;
+}
+    .custombutton:hover {
+        /*box-shadow: 3px 2px 2px crimson;*/
+        box-shadow: 0px 0px 5px 0px #888888;
+    }
+    .custombutton a {
+    color:white;
+    text-decoration:none;
+    }
+.SearchBar {
+    padding-left: 250px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    background-color: silver;
+    position:fixed;
+    width:100%;
+}
+.Search {
+    margin-top:3px;
+}
+
+.DropDown {
+    background-color:#363638;
+    color:white;
+    height:30px;
+}
+.loader
+{
+    display:none;
+    height:50px;
+    width:50px;
+    opacity:0.7;
+    margin-top:50px;
+    margin-left:50%;
+    border-radius:50%;
+    border:10px solid silver;
+    border-top-color:crimson;
+    animation:loaderspin 2s linear infinite;
+}
+@-webkit-keyframes loaderspin {
+    0% {      -webkit-transform: rotate(0deg);  }
+
+    100% {      -webkit-transform: rotate(360deg);   }
+}
+
+@keyframes loaderspin {
+    0% {      transform: rotate(0deg);  }
+
+    100% {       transform: rotate(360deg);   }
+}
+
+.loadersupport {
+    display:none;
+    padding:10%;
+    background-color:rgba(0,0,0,0.2);
+}
+.CommentStyle {
+    font-family: Calibri;
+    font-size: 18px;
+    padding:5px;
+    color:black;
+    background-color:white;
+    border-radius:3px;
+    width:600px;
+}
+.ReplyStyle {
+    margin-left: 200px;
+    margin-right:200px;
+    border-bottom: 1px solid silver;
+    width: 600px;
+    margin-bottom: 5px;
+    table-layout:fixed;
+}
+    .ReplyStyle td {
+        word-wrap: break-word;
+        width: 600px;
+    }
+
+.ActorDescription {
+    background-color:#d1cece;
+    border-radius:3px;
+    height:200px;
+    width:200px;
+    box-shadow:-1px 1px 2px 1px rgba(0,0,0,0.3);
+}
+
+
+.ContentDropingbar {
+    height:50px;
+    margin:20px 0px 20px 0px;
+    background-color: #383636;
+    cursor:pointer;
+    width:1000px;
+}
+    .ContentDropingbar label {
+        font-size: larger;
+        margin-top: 10px;
+        color: white;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+.TotalMovies {
+    background-color: #e2e2e2;
+    width:1000px;
+}
+.blacklike {
+    height:50px;
+    width:50px;
+}
+.bluelike {
+    height: 30px;
+    width: 30px;
+    cursor:pointer;
+}
+
+.objMovieStyle {
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px silver;s
+    border:1px solid silver;
+    border-radius: 3px;
+    margin-bottom:10px;
+    color:black;
+}
+
+    .objMovieStyle td {
+        padding:3px;
+    }
+    .objMovieStyle:hover {
+        box-shadow: 0px 0px 3px 0px black;
+    }
+ .objMovieStylewidth {
+     color:black;
+        width:70%;
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px #888888;
+        border-radius: 3px;
+        margin-bottom: 7px;
+        /*margin-left: 150px;*/
+    }
+    .objMovieStylewidth td {
+        padding: 5px;
+    }
+
+    
+    .or {
+        color: white;
+        font-size: 20px;
+        margin-left: 900px;
+    }
+.LoginTemplete {
+    margin: 100px 200px 200px 500px;
+    height: 300px;
+    width:500px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888888;
+    position:absolute;
+}
+.LoginTempleteviewSupporter {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+.LoginForm {
+    margin-left:60px;
+    color:black;
+}
+    .LoginForm td {
+        padding:10px;
+    }
+.Customscrollbar::-webkit-scrollbar {
+    background-color: #363638;
+    border-radius: 10px;
+    height: 8px;
+}
+.Customscrollbar::-webkit-scrollbar-thumb {
+    background-color: crimson;
+    border-radius:10px;
+}
+.latestMoviesStyle {
+    width: 90%;
+    height: auto;
+    border: 1px solid white;
+    overflow-x: scroll;
+    box-shadow: 0px 0px 15px 0px #888888;
+    border-right:3px;
+    padding:2px;
+}
+    .latestMoviesStyle a {
+    cursor:pointer;
+    text-align:center;
+    }
+
+.Moviecategory a {
+    background-color: crimson;
+    border: 7px solid crimson;
+    color: white;
+    list-style-type: none;
+    border-radius: 3px 0px 0px 3px;
+    /*border-right:2px solid silver;*/
+    text-decoration:none;
+    /*box-shadow: 0px 0px 3px 0px black;*/
+}
+  .Moviecategory a:hover {
+        box-shadow: 0px 0px 3px 0px black
+    }
+.Moviecategory text {
+    background-color: #888888;
+    border: 7px solid #888888;
+    border-radius:0px 3px 3px 0px;
+    color: white;
+}
+.Moviecategory label {
+    background-color: #888888;
+    border: 7px solid #888888;
+    border-radius: 0px 3px 3px 0px;
+    color: white;
+}
+.Moviecategory li {
+list-style-type:none;
+margin-bottom:12px;
+}
+
+.MoviecategoryContainer {
+    width: 200px;
+    float: left;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888888;
+    position:absolute;
+}
+
+#profilehidebutton {
+    float: right;
+    height: 50px;
+    background-color: crimson;
+    color: white;
+    padding: 2px 5px 2px 5px;
+}
+#profilehidebutton button{
+    margin-top:12px;
+    background-color: crimson;
+    border: 2px solid crimson;
+    cursor: pointer;
+    color: white;
+}
+#profileviewcontainer {
+    float:right;
+    width: auto;
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px #888888;
+}
+
+.UserTable {
+    background-color: #888888;
+    color: white;
+    float:left;
+}
+    .UserTable td {
+    padding:20px 20px 20px 20px;
+    }
+.usertablewidth {
+width:150px;
+}
+
+
+
+.FormTable table {
+    margin-left:250px;
+}
+    .FormTable td {
+    padding:5px 5px 5px 5px;
+    }
+
+.PopUpClass {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+}
+
+.Pointer {
+height:0px;
+width:0px;
+position:absolute;
+margin-top:10px;
+}
+.Pointer::after {
+    content: "";
+    position: absolute;
+    bottom: 80%;
+    left: 50%;
+    margin-left: 45px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}

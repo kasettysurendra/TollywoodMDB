@@ -1,0 +1,23 @@
+﻿@model TollywoodMDB.Models.Movies
+
+@{
+    ViewBag.Title = "MovieSongs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movie_Name</h2>
+<table class="objMovieStylewidth">
+    <tr>
+        <td rowspan="7"><img class="objMovieStyle" src="@Url.Action("GetImage", "Movies", new { id = Model.MovieId })" height="170" width="150"
+     alt="@Model.Movie_Name" onclick="@Url.Action("MovieSongs", "Songs", new { id = Model.MovieId })" /></td>
+     <td><b>Cast:</b></td><td>@Model.Movie_Cast</td>
+    </tr>
+    <tr>
+      <td><b>Director:</b></td><td>@Model.MovieDirector</td>
+    </tr>
+    <tr>
+        <td><b>MusicDirector:</b></td><td>@Model.MusicDirector</td>
+    </tr>
+</table>
+@{Html.RenderAction("SongsView", "Songs",new { movieId = Model.MovieId});}
+

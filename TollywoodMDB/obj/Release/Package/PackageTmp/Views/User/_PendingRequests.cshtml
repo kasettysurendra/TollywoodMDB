@@ -1,0 +1,77 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+<script>
+    $(document).ready(function () {
+    });
+
+    function RequestAccept(followerId) {
+        $.ajax({
+            url: '@Url.Action("Accept","User")',
+            type: "Post",
+            data: { FollowerId: followerId },
+            dataType: "Json",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                $("#Accept" + followerId).hide();
+                $("#Reject" + followerId).hide();
+                $("#RequestAccepted" + followerId).html("<td><div class='Moviecategory'><label> Request Accepted</label><label>&#10004;</label></div></td >");
+
+            },
+            Error: function (jqXHR) {
+                alert(jqXHR.statusText);
+            }
+        })
+    }
+      function RequestReject(followerId) {
+        $.ajax({
+            url: '@Url.Action("Reject","User")',
+            type: "Post",
+            data: { FollowerId: followerId },
+            dataType: "Json",
+            cache: false,
+            success: function (data, statusText, jqXHR) {
+                $("#Accept" + followerId).hide();
+                $("#Reject" + followerId).hide();
+                $("#RequestAccepted" + followerId).html("<td><div class='Moviecategory'><label>Request Rejected</label></div></td >");
+
+            },
+            Error: function (jqXHR) {
+                alert(jqXHR.statusText);
+            }
+        })
+    }
+</script>
+<div class="Pointer" >
+    <div style="background-color:white;box-shadow: 0px 0px 5px 0px #888888;width:450px;height:400px;overflow-y:scroll;"
+         id="PendingRequests">
+        @if (Model.IdNameStatus.Count > 0)
+        {
+            foreach (var follwer in Model.IdNameStatus)
+            {
+                <table style="background-color:#9599b6;padding:0px 0px 3px 0px;">
+                    <tr >
+                        <td rowspan="2"><img src="@Url.Action("GetImage", "Login", new { id = follwer.id })" height="70" width="60" /></td>
+                        <td style="color:black;">@follwer.Username</td>
+                    </tr>
+                    <tr id="@string.Format("RequestAccepted" + follwer.id)">
+                        <td><button class="custombutton" onclick="RequestAccept(@follwer.id)" id="@string.Format("Accept" + follwer.id)">Accept</button></td>
+                        <td><button class="custombutton" id="@string.Format("Reject" + follwer.id)" onclick="RequestReject(@follwer.id)">Reject</button></td>
+                    </tr>
+                </table>
+            }
+        }
+        else
+        {
+            <div style="width:350px;">
+                <table><tr><td class="Moviecategory"><label>No pending requests found</label></td></tr></table>
+            </div>
+
+        }   
+    </div>
+
+</div>
+
+
+
+
+

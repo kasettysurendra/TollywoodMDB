@@ -1,0 +1,83 @@
+﻿@model TollywoodMDB.Models.Logins
+    <script>
+        $(document).ready(function () {
+            var remember = false;
+            $(function () {
+                $("#RememberMe").change(function () {
+                    remember = $(this).is(':checked');
+                });
+            });
+            $("#Loginbutton").on("click", function () {
+                var Emaild = $("#EmailId").val();
+                var pswd = $("#Password").val();
+                $.ajax({
+                    url: '@Url.Action("LoginTemplete", "Login")',
+                    data: { id: Emaild, Password: pswd, Remember: remember },
+                    type: "Post",
+                    dataType: "Json",
+                    cache: false,
+                    success: function (data, statusText, jqXHR) {
+                        if (data != "Please Enter valid credentials.") {
+                            $("#LoginTempleteview").hide();
+                            window.location.reload();
+                        }
+                        else {
+                            alert(data);
+                        }
+                    },
+                    error: function (data) {
+                        alert(data.statusText);
+                    }
+                })
+            })
+            $("#Cancelbutton").on("click", function () {
+                $("#LoginTempleteview").hide();
+                $(".LoginTempleteviewSupporter").hide();
+            })
+
+            $("#forgotpass").on("click", function () {
+                var Emaild = $("#EmailId").val();
+                 $.ajax({
+                     url: '@Url.Action("ForgotPassword", "Login")',
+                     data: { emailId: Emaild},
+                    type: "Post",
+                    dataType: "Json",
+                    cache: false,
+                    success: function (data, statusText, jqXHR) {
+                        alert(data);
+                    },
+                    error: function (data) {
+                        alert(data.statusText);
+                    }
+                })
+            })
+        });
+    </script>
+
+    <div class="LoginTemplete">
+        <br />
+        <br />
+        <table class="LoginForm">
+            <tr>
+                <td colspan="2">Please enter your credentials below.</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><b>Email Id:</b></td>
+                <td>@Html.TextBoxFor(m => m.EmailId,new { @id="EmailId"})</td>
+            </tr>
+            <tr>
+                <td><b>Password:</b></td>
+                <td>@Html.PasswordFor(m => m.Password, new { @id = "Password" })</td>
+            </tr>
+            <tr>
+                <td colspan="2">@Html.CheckBoxFor(m=>m.NewsLetter,new { @id="RememberMe"}) &nbsp;&nbsp;Remember Me</td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Cancel" class="custombutton" id="Cancelbutton" /></td>
+                <td><input type="button" value="Login" class="custombutton" id="Loginbutton"/></td>
+                <td><a id="forgotpass" style="cursor:pointer;">Forgot password?</a></td>
+            </tr>
+        </table>
+
+    </div>

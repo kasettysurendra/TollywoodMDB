@@ -1,0 +1,253 @@
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\ApplicationInsights.config
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.exe
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.exe.config
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.rsp
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\csi.exe
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\csi.rsp
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.AppContext.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.exe
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.exe.config
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.rsp
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\VBCSCompiler.exe
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.pdb
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll.CodeAnalysisLog.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll.lastcodeanalysissucceeded
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Antlr3.Runtime.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\CLS.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\EntityFramework.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\EntityFramework.SqlServer.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Web.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.ApplicationInsights.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Newtonsoft.Json.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Helpers.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Mvc.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Optimization.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Razor.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Razor.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\WebGrease.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\EntityFramework.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\EntityFramework.SqlServer.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Helpers.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Mvc.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Optimization.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.Razor.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Razor.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Antlr3.Runtime.pdb
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Newtonsoft.Json.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.ApplicationInsights.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Web.xml
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.InitialCreate.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovie_Release_Dateproperty.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovieImagesmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovie_Idpropertychangedmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.moviegenremig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MoviereviewsTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ReviewReplyTableandUpdatesmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReviewtablechangesmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReviewTableForgienKeyAddMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieGenresmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.movieGenrelengthRemovemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.datimechangeforReviewsTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ActorsTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.chagestoActorsTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.chagestoActorsaddgenderTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addviewstoMoviesTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddSongsTableMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.SongAudiosTableMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddLikesAndDislikesToMoviesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieVideosTableMigandMoviesChanges.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.LoginTableMIg.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updatetologintablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MoviesTableChangesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updatestoDB.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.RoletoLogintable.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserfilesTableMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.newmig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.databasegeneratednullinLoginFilesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.useridinReviewReplyMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addcolumReleaseDateToSongsMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.EmailsTableMigrations.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ActorFilesTableMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowingsTablesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.databaseupdatemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowingsChanges.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowersTablemig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddColumnToUserFollowersTable.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB1.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addKeyTOUserFollowers.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.nameChangesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB3.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB4.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieRatingstableMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ChangeDataTypeInMoviesMig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.occupationToActors.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReleatedDatamig.resources
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csproj.GenerateResource.Cache
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csproj.CoreCompileInputs.cache
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.dll
+C:\Users\suren\OneDrive\Documents\Visual Studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.pdb
+C:\Users\suren\onedrive\documents\visual studio 2017\Projects\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csprojResolveAssemblyReference.cache
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\ApplicationInsights.config
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.exe
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.exe.config
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\csc.rsp
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\csi.exe
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\csi.rsp
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.AppContext.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.exe
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.exe.config
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\vbc.rsp
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\VBCSCompiler.exe
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll.config
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.pdb
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll.CodeAnalysisLog.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\TollywoodMDB.dll.lastcodeanalysissucceeded
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Antlr3.Runtime.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\CLS.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\EntityFramework.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\EntityFramework.SqlServer.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Web.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.ApplicationInsights.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Newtonsoft.Json.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Helpers.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Mvc.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Optimization.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Razor.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Razor.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\WebGrease.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\EntityFramework.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\EntityFramework.SqlServer.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Helpers.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Mvc.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Optimization.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.Razor.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\System.Web.WebPages.Razor.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Antlr3.Runtime.pdb
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Newtonsoft.Json.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.ApplicationInsights.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\bin\Microsoft.AI.Web.xml
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csprojResolveAssemblyReference.cache
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.InitialCreate.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovie_Release_Dateproperty.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovieImagesmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addMovie_Idpropertychangedmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.moviegenremig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MoviereviewsTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ReviewReplyTableandUpdatesmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReviewtablechangesmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReviewTableForgienKeyAddMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieGenresmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.movieGenrelengthRemovemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.datimechangeforReviewsTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ActorsTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.chagestoActorsTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.chagestoActorsaddgenderTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addviewstoMoviesTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddSongsTableMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.SongAudiosTableMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddLikesAndDislikesToMoviesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieVideosTableMigandMoviesChanges.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.LoginTableMIg.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updatetologintablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MoviesTableChangesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updatestoDB.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.RoletoLogintable.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserfilesTableMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.newmig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.databasegeneratednullinLoginFilesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.useridinReviewReplyMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addcolumReleaseDateToSongsMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.EmailsTableMigrations.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ActorFilesTableMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowingsTablesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.databaseupdatemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowingsChanges.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.UserFollowersTablemig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.AddColumnToUserFollowersTable.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB1.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.addKeyTOUserFollowers.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.nameChangesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB3.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.updateDB4.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieRatingstableMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.ChangeDataTypeInMoviesMig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.occupationToActors.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.Migrations.MovieReleatedDatamig.resources
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csproj.GenerateResource.Cache
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.csproj.CoreCompileInputs.cache
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.dll
+C:\Users\suren\Desktop\TollywoodMDB\TollywoodMDB\obj\Debug\TollywoodMDB.pdb

@@ -1,0 +1,104 @@
+﻿@model TollywoodMDB.Models.Logins
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+
+
+@if (ViewBag.PopUpStatus != null)
+{
+    Html.RenderPartial("PopUpView");
+}
+
+<h2>Register</h2>
+<form action='@Url.Action("Register","Login")' method="post">
+
+    <div  class="FormTable">
+        <table>
+            <tr>
+                <td >
+                 
+                    @Html.LabelFor(model => model.FirstName)
+                </td>
+                <td>
+
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { } })
+                </td>
+                <td>@Html.ValidationMessageFor(model => model.FirstName, "", new { })</td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.LastName, htmlAttributes: new { })
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new {  } })
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.EmailId, htmlAttributes: new { })
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new {  } })
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.EmailId, "", new { })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { })
+                </td>
+                <td>
+                    @Html.PasswordFor(model => model.Password, new { htmlAttributes = new {  } })</td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.Password, "", new { })
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.NewsLetter, htmlAttributes: new { })
+                </td>
+                <td>
+                    @Html.CheckBoxFor(model => model.NewsLetter, new { htmlAttributes = new {  } })
+                    </td>
+                <td>
+                    @Html.ValidationMessageFor(model => model.NewsLetter, "", new { })
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register" class="custombutton" />
+                </td>
+            </tr>
+            <tr>
+                @if (ViewBag.RegisterStatus != null)
+            {
+                    <td>
+                        <label style="color:red;">@ViewBag.PopUpStatus</label>
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        <label style="color:blue;">Please click on LogIn,If you have already registered.</label>
+                    </td>
+                }
+            </tr>
+        </table>
+    </div>
+</form>
+
+
+

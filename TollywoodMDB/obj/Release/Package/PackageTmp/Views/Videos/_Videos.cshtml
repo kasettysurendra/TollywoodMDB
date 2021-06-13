@@ -1,0 +1,21 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+
+<div style="height:50px;margin:20px 0px 20px 0px;background-color: #383636">
+    <label style="font-size: larger;margin-top:10px;color:white;margin-left:5px;">Videos</label>
+</div>
+@if (Model.MovieVideos.Count > 0)
+{
+        foreach (var v in Model.MovieVideos)
+        {
+        <label style="font-size:35px;"><b>@v.VideoTitle</b></label><br />
+        <iframe id="MovieTrailer" width="560" height="315" src="@v.VideoEmbedURl" frameborder="0" allowfullscreen></iframe>
+        <br />
+        }
+}
+else
+{
+    <pre><label>No Videos Found .........</label></pre>
+}
+
+    

@@ -1,0 +1,157 @@
+﻿@model TollywoodMDB.Models.MovieAndImagesDetails
+
+@Scripts.Render("~/Scripts/jquery-3.1.1.js")
+
+<script>
+    $(document).ready(function () {
+    });
+    function ReplyClicked(commentId) {
+        $("#" + commentId + "").css("display", "block");
+        $('[value="' + commentId + '"]').hide();
+        $('[name="' + commentId + '"]').css("display", "block");
+    }
+    function SubmitClicked(commentId) {
+        var comment = $("#" + commentId + "").val();
+        if (comment == '') {
+            alert("Comments cannot be null");
+        }
+        else {
+            var id =@Model.Movies.FirstOrDefault().MovieId;
+            $.ajax({
+                url: '@Url.Action("ReplyUpdate","MovieDetails")',
+                data: { commentId: commentId, comment: comment, id: id },
+                type: "POST",
+                cache: false,
+                dataType: "html",
+                success: function (data, statusText, jqXHR) {
+                    renderpartialview();
+                },
+                Error: function (jqXHR)
+                { alert(jqXHR.statusText) }
+            })
+        }
+    }
+    function PostNewReview()
+    {
+        var id =@Model.Movies.FirstOrDefault().MovieId;
+        var comment = $("#reviewText").val();
+        if (comment == '') {
+            alert("Review Cannot be null");
+        }
+        else {
+            $.ajax({
+                url: '@Url.Action("ReviewUpdate", "MovieDetails")',
+                data: { id: id, Comment: comment },
+                dataType: "html",
+                type: "POST",
+                cache: false,
+                success: function (data, statusText, jqXHR) {
+                    renderpartialview();
+                },
+                Error: function (jqXHR)
+                { alert(jqXHR.statusText) }
+            })
+        }
+    }
+</script>
+
+
+<div style="height:50px;margin:20px 0px 20px 0px;background-color: #383636">
+    <label style="font-size: larger;margin-top:10px;color:white;margin-left:5px;">Reviews</label>
+</div>
+
+    @if (Model.MovieReviews.Count <= 0)
+    {
+        <pre>               <label>There are no reviews for this movie,Please post your review.</label></pre>
+    }
+    else
+    {
+        foreach (var r in Model.MovieReviews)
+        {
+            <table class="objMovieStyle">
+                @if (r.UserId > 0)
+                {
+                <tr>
+                    <td><img src="@Url.Action("GetImage","Login",new { id=r.UserId})" height="50" width="50" />
+                    @foreach(var id in Model.DictionaryValues)
+                    {
+                        if(id.Key==r.UserId)
+                        {
+                            <b>@id.Value</b>
+                        }
+                    }
+                    </td>                   
+                </tr>
+                }
+                else
+                {
+                <tr>
+                    <td>
+                          <img src="@Url.Action("GetImage", "Login", new { id = 2 })" height="50" width="50" />
+                          <b> Unknown</b><br /> <span style="color:silver;">Says:</span>
+                    </td>
+                </tr>
+                }
+                <tr>
+                      <td style="word-wrap:break-word;"><p class="CommentStyle">@r.Comment<br />
+                      <span style="color:silver;font-size:10px;">@r.CommentDate</span></p><td>
+               </tr>            
+            </table>
+                foreach (var rr in Model.ReviewReplys)
+                {
+                if (rr.CommentId == r.CommentId)
+                {
+
+                <table class="ReplyStyle">
+                    <tr>
+                        @if (rr.UserId > 0)
+                        {
+                            <td>
+                                <img src="@Url.Action("GetImage", "Login", new { id = rr.UserId })" height="50" width="50" />
+                                @foreach (var id in Model.DictionaryValues)
+                                {
+                                    if (id.Key == rr.UserId)
+                                    {
+                                        <b>@id.Value</b><br /> <span style="color:silver;">Says:</span>
+                                    }
+                                }
+                            </td>
+                        }
+                        else
+                        {
+                        <td>
+                            <img src="@Url.Action("GetImage", "Login", new { id = 2 })" height="50" width="50" />
+                            <b> Unknown</b><br /> <span style="color:silver;">Says:</span>
+                        </td>
+                        }
+                        
+                        </tr>
+                    <tr>
+                        <td>@rr.Reply &nbsp;&nbsp;<span style="color:silver; font-size:10px;">@rr.ReplyDate</span><td/>
+                    </tr>
+                </table>
+
+                }
+
+                }
+
+
+
+            <table style="margin-left:200px;">
+                <tr>
+                    <td></td>
+                    <td><textarea id="@r.CommentId" style="display:none;width:500px;"></textarea></td>
+                    <td><button id="Reply" class="custombutton" value="@r.CommentId" onclick="ReplyClicked($(this).val())">Reply</button></td>
+                    <td><button id="Comment" class="custombutton" style="display:none" name="@r.CommentId" onclick="SubmitClicked(@r.CommentId)">Submit</button></td>
+                </tr>
+            </table>
+        }
+
+    }
+<br/>
+<div>
+    <textarea id="reviewText" style="width:500px;height:100px;border-radius:5px;"></textarea><br />
+    <button class="custombutton" onclick="PostNewReview()">Post Review</button>
+
+</div>
+   

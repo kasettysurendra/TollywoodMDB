@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title>TollywoodMDB</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-3.1.1.js")
+    <link rel="stylesheet" href="~/Content/themes/base/autocomplete.css" />
+    <link rel="stylesheet" href="~/Content/themes/base/jquery-Ui-Smoothness.css" />
+</head>
+<body>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("TollywoodMDB", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
+                            <li>@Html.ActionLink("Songs", "Index", "Songs")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                        <div style="float:right;">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <div style="margin-top:8px;background-color:white;border-radius:5px;height:auto;">
+                                        <input type="text" id="searchText" style="height:30px;width:250px;border:none;padding:5px 5px 5px 5px;" />
+                                        <button style="font-size:20px;cursor:pointer;padding-left:10px;" id="SearchIcon">&#128269;</button>
+                                    </div>
+                                </li>
+                                @if (!string.IsNullOrEmpty(Session["UserEmail"] as string))
+                                {
+                                    <li><a id="Logout" style="cursor:pointer;">Logout</a></li>
+                                }
+                                else
+                                {
+                                    <li><a id="Login" style="cursor:pointer;">Login</a></li>
+                                }
+                                <li>@Html.ActionLink("|", "", "")</li>
+                                <li><a id="SignUp" style="cursor:pointer;">SignUp</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    <div  class="LoginTempleteviewSupporter">
+        <div id="LoginTempleteview"><label style="color:white;">Please wait..</label></div>
+    </div>
+</body>
+</html>
